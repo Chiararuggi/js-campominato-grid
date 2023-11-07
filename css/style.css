@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+:root {
+    --num-cells-per-row: 10;
+}
+
 
 
 /*utilities*/ 
@@ -74,4 +78,10 @@ h1{
     margin: 0 auto;
     height: 600px;
     width: 600px;
+}
+
+.square {
+    border: solid 1px;
+    height: calc(100% / var(--num-cells-per-row) );
+    width: calc(100% / var(--num-cells-per-row) );
 }
