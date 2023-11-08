@@ -4,20 +4,16 @@ let cellDifficultyHard= 49;
 
 function getDifficulty(){
     const difficulty = parseInt(document.getElementById("diffSelector").value);
-    console.log("Difficoltà: ", difficulty);
     return difficulty;
 }
 
 function createCell(cellAmount){
-
-
     grid.innerHTML = "";
     for (let i = 1; i <= cellAmount; i++) {
         let cell = createSquare(i);
         let grid = document.getElementById("grid");
         grid.appendChild(cell);
     }
-    
 };
 
 function createSquare(squareAmount){
@@ -33,9 +29,8 @@ function createSquare(squareAmount){
 
 
 document.getElementById("playButton").addEventListener("click", function(){
-    
     const difficulty = getDifficulty();
-    
+
     if (difficulty == 1) {
         createCell(cellDifficultyEasy);
     } else if (difficulty == 2) {
